@@ -6,6 +6,6 @@ public class Julian {
 	Integer alter = 17;
 	String beruf = "Informatiker";
 	
-	//Testasgzio02
+	//Testasgzio0
 	String test;
 }
