@@ -1,5 +1,7 @@
 
 public class Phillip {
 	//Test
-	//blablablabl
+	public float huhu(float x) {
+		return x;
+	}
 }
