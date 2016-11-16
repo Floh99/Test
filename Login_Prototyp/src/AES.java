@@ -8,6 +8,7 @@ import org.apache.commons.codec.binary.Base64;
 
 /**
  * Diese Klasse bietet die Möglichkeit Strings einfach zu verschlüsseln.
+ * <strong>WICHTIG:</strong> Apache Commons Codes wird benötigt!!!!
  * @author Piel, Goyer
  */
 public class AES {
