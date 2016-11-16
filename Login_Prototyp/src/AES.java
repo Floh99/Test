@@ -76,10 +76,10 @@ public class AES {
     /**
      * Diese Methode verschlüsselt einen einfachen String mit dem vorher gesetzten 
      * Schlüssel und dem Verschlüsselungsverfahren.
+     * Verschlüsselten String durch die Methode getEncryptedString() holen.
      * @param strToEncrypt String welcher verschlüsselt werden soll
-     * @return Gibt den Verschlüsselten String zurück
      */
-    public static String encrypt(String strToEncrypt) {
+    public static void encrypt(String strToEncrypt) {
         try {
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
@@ -88,16 +88,14 @@ public class AES {
         catch (Exception e) {
             System.out.println("Error while encrypting: " + e.toString());
         }
-        
-        return null;
     }
     
     /**
      * Diese Methode entschlüsselt einen verschlüsselten String.
+     * Entschlüsselten String durch die Methode getDecryptedString() holen.
      * @param strToDecrypt Einen verschlüsselten String eingeben
-     * @return Gibt einen Klartextstring zurück.
      */
-    public static String decrypt(String strToDecrypt) {
+    public static void decrypt(String strToDecrypt) {
         try {
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
@@ -107,7 +105,5 @@ public class AES {
         catch (Exception e) {
             System.out.println("Error while decrypting: "+e.toString());
         }
-        
-        return null;
     }
 }
