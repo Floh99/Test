@@ -7,8 +7,8 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * Diese Klasse bietet die Möglichkeit Strings einfach zu verschlüsseln.
- * <strong>WICHTIG:</strong> Apache Commons Codes wird benötigt!!!!
+ * Diese Klasse bietet die MÃ¶glichkeit Strings einfach zu verschlÃ¼sseln.
+ * <strong>WICHTIG:</strong> Apache Commons Codecs wird benÃ¶tigt!!!!
  * @author Piel, Goyer
  */
 public class AES {
@@ -20,9 +20,9 @@ public class AES {
     private static String encryptedString;
     
     /**
-     * Mit dieser Methode wird der Verschlüsselungsschlüssel gesetzt
+     * Mit dieser Methode wird der VerschlÃ¼sselungsschlÃ¼ssel gesetzt
      * und verarbeitet.
-     * @param myKey Einen Verschlüsselungsschlüssel angeben
+     * @param myKey Einen VerschlÃ¼sselungsschlÃ¼ssel angeben
      */
     public static void setKey(String myKey){
         MessageDigest sha = null;
@@ -42,42 +42,42 @@ public class AES {
     }
     
     /**
-     * Gibt einen entschlüsselten String zurück.
-     * @return Der entschlüsselte String
+     * Gibt einen entschlÃ¼sselten String zurÃ¼ck.
+     * @return Der entschlÃ¼sselte String
      */
     public static String getDecryptedString() {
         return decryptedString;
     }
     
     /**
-     * Setzt einen verschlüsselten String
-     * @param decryptedString Einen entschlüsselten String angeben
+     * Setzt einen verschlÃ¼sselten String
+     * @param decryptedString Einen entschlÃ¼sselten String angeben
      */
     public static void setDecryptedString(String decryptedString) {
         AES.decryptedString = decryptedString;
     }
     
     /**
-     * Gibt einen verschlüsselten String zurück.
-     * @return Ein verschlüsselter String
+     * Gibt einen verschlÃ¼sselten String zurÃ¼ck.
+     * @return Ein verschlÃ¼sselter String
      */
     public static String getEncryptedString() {
         return encryptedString;
     }
     
     /**
-     * Setzt einen verschlüsselten String.
-     * @param encryptedString verschlüsselter String
+     * Setzt einen verschlÃ¼sselten String.
+     * @param encryptedString verschlÃ¼sselter String
      */
     public static void setEncryptedString(String encryptedString) {
         AES.encryptedString = encryptedString;
     }
     
     /**
-     * Diese Methode verschlüsselt einen einfachen String mit dem vorher gesetzten 
-     * Schlüssel und dem Verschlüsselungsverfahren.
-     * @param strToEncrypt String welcher verschlüsselt werden soll
-     * @return Gibt den Verschlüsselten String zurück
+     * Diese Methode verschlÃ¼sselt einen einfachen String mit dem vorher gesetzten 
+     * SchlÃ¼ssel und dem VerschlÃ¼sselungsverfahren.
+     * @param strToEncrypt String welcher verschlÃ¼sselt werden soll
+     * @return Gibt den VerschlÃ¼sselten String zurÃ¼ck
      */
     public static String encrypt(String strToEncrypt) {
         try {
@@ -93,9 +93,9 @@ public class AES {
     }
     
     /**
-     * Diese Methode entschlüsselt einen verschlüsselten String.
-     * @param strToDecrypt Einen verschlüsselten String eingeben
-     * @return Gibt einen Klartextstring zurück.
+     * Diese Methode entschlÃ¼sselt einen verschlÃ¼sselten String.
+     * @param strToDecrypt Einen verschlÃ¼sselten String eingeben
+     * @return Gibt einen Klartextstring zurÃ¼ck.
      */
     public static String decrypt(String strToDecrypt) {
         try {
