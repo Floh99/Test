@@ -10,8 +10,7 @@ import org.apache.commons.codec.binary.Base64;
  * Diese Klasse bietet die Möglichkeit Strings einfach zu verschlüsseln.
  * @author Piel, Goyer
  */
-public class AES
-{
+public class AES {
     
     private static SecretKeySpec secretKey ;
     private static byte[] key ;
