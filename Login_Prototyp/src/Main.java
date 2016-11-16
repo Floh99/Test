@@ -106,22 +106,30 @@ public class Main {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
 				if(!textField.getText().equals("") && !passwordField.getPassword().equals("")) {
 					System.out.println(String.valueOf(passwordField.getPassword()));
 
+					// Variablen anlegen
 					final String strToEncrypt = String.valueOf(passwordField.getPassword());
 	                final String strPssword = "encryptor key";
+	                
+	                // Verschlüsselungsschlüssel wird gesetzt
 	                AES.setKey(strPssword);
 	               
+	                // Verschlüsselt das Passwort
 	                AES.encrypt(strToEncrypt.trim());
 	                
+	                // Ausgaben...
 	                System.out.println("String to Encrypt: " + strToEncrypt); 
 	                System.out.println("Encrypted: " + AES.getEncryptedString());
 	           
+	                // Zu entschlüsselnder String wird gesetzt
 	                final String strToDecrypt =  AES.getEncryptedString();
+	                
+	                // Verschlüsselten String entschlüsseln
 	                AES.decrypt(strToDecrypt.trim());
 	               
+	                // Ausgabe...
 	                System.out.println("String To Decrypt : " + strToDecrypt);
 	                System.out.println("Decrypted : " + AES.getDecryptedString());
 
