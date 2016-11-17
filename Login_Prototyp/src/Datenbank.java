@@ -78,17 +78,23 @@ public class Datenbank {
 				mySQL.executeUpdate(statment);
 				mySQL = null;
 				myRS = null;
+				mySQL = myCon.createStatement();
+				statment = "flush privileges;";
+				mySQL.executeUpdate(statment);
+				mySQL = null;
+				myRS = null;
 				myCon.close();
 				url = "jdbc:mysql://localhost/loginDB";
-				myCon = DriverManager.getConnection(url, user, pwd);
+				myCon = DriverManager.getConnection(url, user, newPass);
 				System.out.println(name);
 				System.out.println(newPass);
 				AES.encrypt(newPass);
+				mySQL = myCon.createStatement();
 				statment = "update login set passwort='" + AES.getEncryptedString() + "' where name='" + name + "';";
 				mySQL.execute(statment);
 				mySQL = null;
 				myRS = null;
-				System.out.println("Passwort ge‰ndert!!!!");
+				System.out.println("Passwort ge√§ndert!!!!");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
